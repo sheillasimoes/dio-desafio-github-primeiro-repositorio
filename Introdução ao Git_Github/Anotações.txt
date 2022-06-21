@@ -1,0 +1,15 @@
+Link para download do Git https://gitforwindows.org/
+O Git é um repositório na máquina local.
+O github é que repositório remoto.
+Pode-se ligar os dois repositório, mas é necessário copiar as informações do reositório local para o repositório remoto ou do remoto para o local.
+Existe um conjunto de comando e passos que devem ser executado para a concretização da cópia.
+
+Para criar o repositório local deve-se executar o comando git init.
+
+Para copiar a informação do repositório remoto para o local deve-se executar o comando git clone [https/ssh - informações que se copia no repositório remoto].
+
+Para obter informações sobre o estado do repositório local dve utilizar o comando git status.
+
+O comando git add .* é utilizado para adicionar todos os arquivos novos criados no repositório local.
+
+O Git Bash é um terminal extendido para optimizar o uso do Git.
