@@ -1,6 +1,14 @@
 Link para download do Git https://gitforwindows.org/
+Objectos do git
+BLOBS - os arquivos ficam guardados neste objecto e fica com meta dados, O SHA1 do aqruivo 
+TREES - armazenam BLOBS ou TREES. Guarda toda a estrutura de onde estão localizados os arquivos, aguarda o BLOB, o nome do arquivo
+COMMITS - aponta para um TREE, mensagem e autor.
+
 O Git é um repositório na máquina local.
 O github é que repositório remoto.
+
+O Git Bash é um terminal extendido para optimizar o uso do Git.
+
 Pode-se ligar os dois repositório, mas é necessário copiar as informações do reositório local para o repositório remoto ou do remoto para o local.
 Existe um conjunto de comando e passos que devem ser executado para a concretização da cópia.
 
@@ -8,8 +16,25 @@ Para criar o repositório local deve-se executar o comando git init.
 
 Para copiar a informação do repositório remoto para o local deve-se executar o comando git clone [https/ssh - informações que se copia no repositório remoto].
 
-Para obter informações sobre o estado do repositório local dve utilizar o comando git status.
+965875017 filipa bicho 2.19
+961102336 natasha barbosa 3.13
 
-O comando git add .* é utilizado para adicionar todos os arquivos novos criados no repositório local.
+Para obter informações sobre o estado do repositório local deve utilizar o comando git status.
 
-O Git Bash é um terminal extendido para optimizar o uso do Git.
+O comando git add . é utilizado para adicionar todos os arquivos novos criados no repositório local. executando este comando os ficheiros passam para o estado stage (faz parte do repositório para o controlo de versões local) e estão prontos para fazer o commit, mas atenção que estas alterações só terão efeito no repositório remoto depois de executar o comando que copia as alterações do repositório local para o repositório remoto.
+
+o comando git init permite iniciar uma repositório na máquina local.
+
+o comando git config --global user.email "email"
+o comando git config --global user.name "name" 
+
+git add . comando que permite preparar os ficheiros que serão adicionados no repositório.
+
+Comando commit -m "escreve uma mensagem que decreve as alterações" permite adicionar os ficheiros no repositório e passa para o estado stage. o -m permite adicionar uma mensagem.
+
+git remote add name.alias [link que apresenta na criação do repositório remoto criado] este comando permite ligar o repositório local com o repositório remoto.
+git push name.alias master (poderá pedir autenticação) envia o nosso repositório local para o repositório remoto.
+
+Podem acontecer conflitos de merge, quando tento fazer push do meu repositório local para o repositório remoto, porque o repositório local não contém a ultima versão do repositório remoto. 
+
+git pull alias.remoto master comando para ir buscar a versão mais actual que está no repositório remoto, para que depois o utilizador possa alterar o fiheiro e volte a fazer o commit e o push depois de resolver  conflito.  
